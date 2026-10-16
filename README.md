@@ -45,6 +45,10 @@ The package also ships a UMD bundle at `dist/widget.umd.js` for `<script>`-tag u
 
 ### React
 
+```bash
+npm install @deepgram/ui react react-dom
+```
+
 ```tsx
 import {
   AgentProvider,

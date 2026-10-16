@@ -76,7 +76,7 @@ Core WebSocket session. Wraps `@deepgram/sdk`'s agent connection with:
 - Audio buffering until `SettingsApplied`
 - Ordered normalization of SDK binary `Blob` messages to `ArrayBuffer`
 
-`@deepgram/agents` depends directly on `@deepgram/sdk` 5.9.0. It disables the underlying socket's retries and owns application-level reconnect so each attempt can refresh authentication and restore Settings. Accumulated conversation context is restored for inline agent configurations only; the protocol cannot attach inline context to an agent UUID. Consumers continue to receive the documented `ArrayBuffer` from the `audio` event even though SDK 5.9 delivers binary messages to its callback as `Blob`.
+`@deepgram/agents` depends directly on `@deepgram/sdk`. It disables the underlying socket's retries and owns application-level reconnect so each attempt can refresh authentication and restore Settings. Accumulated conversation context is restored for inline agent configurations only; the protocol cannot attach inline context to an agent UUID. Consumers continue to receive the documented `ArrayBuffer` from the `audio` event even though the underlying SDK delivers binary messages to its callback as `Blob`.
 
 ### Constructor
 
